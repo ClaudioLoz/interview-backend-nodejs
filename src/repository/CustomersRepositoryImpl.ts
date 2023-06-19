@@ -11,6 +11,7 @@ type RandomUser = {
 
     last: string;
   };
+  phone: string;
 };
 
 export class CustomersRepositoryImpl implements CustomersRepository {
@@ -30,6 +31,7 @@ export class CustomersRepositoryImpl implements CustomersRepository {
             id: item.id.value,
             name: item.name.first,
             lastName: item.name.last,
+            phone: item.phone,
           })
       );
   }

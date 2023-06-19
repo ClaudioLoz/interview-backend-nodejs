@@ -14,6 +14,7 @@ describe('CustomersController', () => {
               name: 'name',
               lastName: 'lastName',
               email: 'email',
+              phone: 'phone',
             },
           ])
         ),
@@ -34,7 +35,7 @@ describe('CustomersController', () => {
       expect(response).toEqual({
         statusCode: 200,
         isBase64Encoded: false,
-        body: '[{"id":"customerId","name":"name","lastName":"lastName","email":"email"}]',
+        body: '[{"id":"customerId","name":"name","lastName":"lastName","email":"email","phone":"phone"}]',
       });
       expect(service.findByFilter).toBeCalledWith({
         name: 'A',

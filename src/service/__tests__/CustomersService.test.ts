@@ -13,6 +13,7 @@ describe('CustomersServiceImpl', () => {
               id: 'customerId',
               name: 'name',
               lastName: 'lastName',
+              phone: 'phone',
             },
           ])
         ),
@@ -30,6 +31,7 @@ describe('CustomersServiceImpl', () => {
           name: 'name',
           lastName: 'lastName',
           email: 'nlastName@miblum.com',
+          phone: 'phone',
         },
       ]);
       expect(repository.findByFilter).toBeCalledWith({
